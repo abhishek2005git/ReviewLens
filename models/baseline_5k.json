@@ -1,0 +1,20 @@
+{
+  "mode": "trained",
+  "dataset": "yelp_sample.csv",
+  "training_rows": 4999,
+  "class_counts": {
+    "1": 882,
+    "2": 1126,
+    "3": 1119,
+    "4": 978,
+    "5": 894
+  },
+  "evaluation": {
+    "split": "stratified 80/20",
+    "random_state": 42,
+    "accuracy": 0.518,
+    "mean_absolute_error": 0.634,
+    "within_one_star": 0.891,
+    "test_rows": 1000
+  }
+}

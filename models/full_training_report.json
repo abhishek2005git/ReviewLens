@@ -1,0 +1,156 @@
+{
+  "mode": "trained",
+  "model_name": "TF-IDF + Linear SVM",
+  "dataset": "Yelp/yelp_review_full",
+  "dataset_url": "https://huggingface.co/datasets/Yelp/yelp_review_full",
+  "training_rows": 649879,
+  "training_cleaning": {
+    "input_rows": 650000,
+    "unusable": 27,
+    "conflicting_rows": 49,
+    "duplicates": 45,
+    "usable_rows": 649879
+  },
+  "test_cleaning": {
+    "input_rows": 50000,
+    "overlap_removed": 15,
+    "unusable": 1,
+    "usable_rows": 49984
+  },
+  "class_counts": {
+    "1": 129955,
+    "2": 129985,
+    "3": 129983,
+    "4": 129979,
+    "5": 129977
+  },
+  "selection": {
+    "validation_rows": 30000,
+    "random_state": 42,
+    "max_features": 400000,
+    "selected_C": 0.25,
+    "candidates": [
+      {
+        "C": 0.25,
+        "converged": true,
+        "accuracy": 0.614667,
+        "mean_absolute_error": 0.4549,
+        "within_one_star": 0.9467,
+        "rows": 30000
+      },
+      {
+        "C": 1.0,
+        "converged": true,
+        "accuracy": 0.588433,
+        "mean_absolute_error": 0.491433,
+        "within_one_star": 0.938267,
+        "rows": 30000
+      },
+      {
+        "C": 4.0,
+        "converged": true,
+        "accuracy": 0.5548,
+        "mean_absolute_error": 0.544933,
+        "within_one_star": 0.9223,
+        "rows": 30000
+      }
+    ]
+  },
+  "evaluation": {
+    "split": "official test; duplicates and train overlap removed",
+    "accuracy": 0.613236,
+    "mean_absolute_error": 0.455146,
+    "within_one_star": 0.948323,
+    "rows": 49984,
+    "classification_report": {
+      "1": {
+        "precision": 0.711765235394725,
+        "recall": 0.7910955477738869,
+        "f1-score": 0.7493366186504928,
+        "support": 9995.0
+      },
+      "2": {
+        "precision": 0.5616763879887665,
+        "recall": 0.5201040208041608,
+        "f1-score": 0.540091400083091,
+        "support": 9998.0
+      },
+      "3": {
+        "precision": 0.5487480021310602,
+        "recall": 0.515,
+        "f1-score": 0.5313386639153985,
+        "support": 10000.0
+      },
+      "4": {
+        "precision": 0.5333620782580576,
+        "recall": 0.4949484845453636,
+        "f1-score": 0.5134377918439348,
+        "support": 9997.0
+      },
+      "5": {
+        "precision": 0.6797809219534459,
+        "recall": 0.7451470882529517,
+        "f1-score": 0.7109647238531672,
+        "support": 9994.0
+      },
+      "accuracy": 0.6132362355953905,
+      "macro avg": {
+        "precision": 0.6070665251452111,
+        "recall": 0.6132590282752727,
+        "f1-score": 0.6090338396692169,
+        "support": 49984.0
+      },
+      "weighted avg": {
+        "precision": 0.6070535632710689,
+        "recall": 0.6132362355953905,
+        "f1-score": 0.609016065457922,
+        "support": 49984.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        7907,
+        1726,
+        204,
+        58,
+        100
+      ],
+      [
+        2481,
+        5200,
+        1899,
+        275,
+        143
+      ],
+      [
+        475,
+        1994,
+        5150,
+        1912,
+        469
+      ],
+      [
+        132,
+        264,
+        1857,
+        4948,
+        2796
+      ],
+      [
+        114,
+        74,
+        275,
+        2084,
+        7447
+      ]
+    ]
+  },
+  "baseline_same_test": {
+    "accuracy": 0.524808,
+    "mean_absolute_error": 0.644786,
+    "within_one_star": 0.886764,
+    "rows": 49984
+  },
+  "accuracy_gain_percentage_points": 8.8428,
+  "elapsed_minutes": 24.68
+}
